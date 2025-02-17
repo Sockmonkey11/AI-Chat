@@ -44,7 +44,7 @@ const [answer,setAnswer]=useState("")
 
     const mutation = useMutation({
         mutationFn: () =>{
-            return fetch(`https://hellohiAi.com/api/chats/${data._id}`, {
+            return fetch(`https://hellohiai.com/api/chats/${data._id}`, {
                 method:"PUT",
                 credentials: "include",
                 headers:{

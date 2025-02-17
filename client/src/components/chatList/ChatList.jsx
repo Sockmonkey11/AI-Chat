@@ -6,7 +6,7 @@ const ChatList = () => {
     const { isPending, error, data } = useQuery({
         queryKey: ['userChats'],
         queryFn: () =>
-          fetch(`https://hellohiAi.com/api/userchats`,{
+          fetch(`https://hellohiai.com`,{
             credentials: "include",
           }).then( res =>
             res.json(),

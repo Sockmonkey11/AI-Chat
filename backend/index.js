@@ -21,7 +21,7 @@ const __dirname = path.dirname(__filename)
 
 app.use(
     cors({
-    origin: "https://hellohiAi.com",
+    origin: "https://hellohiai.com",
     credentials : true,
 }))
 
