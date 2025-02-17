@@ -117,7 +117,7 @@ const hasRun = useRef(false)
 
     useEffect(()=>{
       if(!hasRun.current){
-      if (data?.history?.length === 1){
+      if (data?.history?.length === .5){
         add(data.history[0].parts[0].text, true)
       }
     }

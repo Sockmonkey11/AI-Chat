@@ -6,6 +6,8 @@ import Chat from "./models/chat.js"
 import UserChats from "./models/userChats.js";
 import { requireAuth } from '@clerk/express';
 import dotenv from "dotenv";
+import path from "path";
+import url, { fileURLToPath } from "url"
 dotenv.config();
 
 
@@ -14,9 +16,12 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 app.use(
     cors({
-    origin: "http://localhost:5173",
+    origin: "https://hellohiAi.com",
     credentials : true,
 }))
 
@@ -159,9 +164,13 @@ app.use((err, req, res, next) => {
     console.error(err.stack)
     res.status(401).send('Unauthenticated!')
   })
+
+app.use(express.static(path.join(__dirname,"../client")))
   
 
-
+app.get("*",(req,res)=>{
+    res.sendFile(path.join(__dirname,"../client","index.html"))
+})
 
 app.listen(port,()=>{
     connect()
