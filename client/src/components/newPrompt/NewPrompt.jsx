@@ -23,14 +23,9 @@ const [answer,setAnswer]=useState("")
 
   const chat = model.startChat({
     history: [
-      {
-        role: "user",
-        parts: [{ text: "Hello" }],
-      },
-      {
-        role: "model",
-        parts: [{ text: "Great to meet you. What would you like to know?" }],
-      },
+     data?.history.map(({role,parts})=>(
+      {role, parts: [{text: parts[0].text}]}
+     ))
     ],
     generationConfig: {
 
@@ -49,7 +44,7 @@ const [answer,setAnswer]=useState("")
 
     const mutation = useMutation({
         mutationFn: () =>{
-            return fetch(`http://localhost:3000/api/chats/${data._id}`, {
+            return fetch(`https://hellohiAi.com/api/chats/${data._id}`, {
                 method:"PUT",
                 credentials: "include",
                 headers:{
