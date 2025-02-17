@@ -14,7 +14,7 @@ const ChatPage = () => {
     const { isPending, error, data } = useQuery({
         queryKey: ['chat', chatId],
         queryFn: () =>
-          fetch(`https://hellohiai.com/api/chats/${chatId}`,{
+          fetch(`ai-chat-three-omega.vercel.app/api/chats/${chatId}`,{
             credentials: "include",
           }).then((res) =>
             res.json()

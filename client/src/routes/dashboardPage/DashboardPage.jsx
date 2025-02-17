@@ -9,7 +9,7 @@ const DashboardPage = () => {
 
     const mutation = useMutation({
         mutationFn: (text) =>{
-            return fetch("https://hellohiai.com/api/chats", {
+            return fetch("ai-chat-three-omega.vercel.app/api/chats", {
                 method:"POST",
                 credentials: "include",
                 headers:{

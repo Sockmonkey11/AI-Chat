@@ -21,7 +21,7 @@ const __dirname = path.dirname(__filename)
 
 app.use(
     cors({
-    origin: "https://hellohiai.com",
+    origin: "ai-chat-three-omega.vercel.app",
     credentials : true,
 }))
 

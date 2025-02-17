@@ -44,7 +44,7 @@ const [answer,setAnswer]=useState("")
 
     const mutation = useMutation({
         mutationFn: () =>{
-            return fetch(`https://hellohiai.com/api/chats/${data._id}`, {
+            return fetch(`ai-chat-three-omega.vercel.app/api/chats/${data._id}`, {
                 method:"PUT",
                 credentials: "include",
                 headers:{

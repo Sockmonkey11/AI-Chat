@@ -6,7 +6,7 @@ const ChatList = () => {
     const { isPending, error, data } = useQuery({
         queryKey: ['userChats'],
         queryFn: () =>
-          fetch(`https://hellohiai.com`,{
+          fetch(`ai-chat-three-omega.vercel.app`,{
             credentials: "include",
           }).then( res =>
             res.json(),

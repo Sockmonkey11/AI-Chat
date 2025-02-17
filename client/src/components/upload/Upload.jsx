@@ -9,7 +9,7 @@ const urlEndpoint = import.meta.env.VITE_IMAGE_KIT_ENDPOINT
 const publicKey = import.meta.env.VITE_IMAGE_KIT_PUBLIC_KEY; 
 const authenticator =  async () => {
     try {
-        const response = await fetch('https://hellohiai.com/api/upload');
+        const response = await fetch('ai-chat-three-omega.vercel.app/api/upload');
 
         if (!response.ok) {
             const errorText = await response.text();
